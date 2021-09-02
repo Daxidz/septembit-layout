@@ -2,12 +2,12 @@
 
 importer="aseprite.wizard.plugin"
 type="SpriteFrames"
-path="res://.import/weapon.aseprite-249eb531d9481e5af417b67a33f52869.res"
+path="res://.import/shield.aseprite-8a0cd0ba34586a38ccc4e19491a66ef3.res"
 
 [deps]
 
-source_file="res://img/anim/09/weapon.aseprite"
-dest_files=[ "res://.import/weapon.aseprite-249eb531d9481e5af417b67a33f52869.res" ]
+source_file="res://img/anim/11/shield.aseprite"
+dest_files=[ "res://.import/shield.aseprite-8a0cd0ba34586a38ccc4e19491a66ef3.res" ]
 
 [params]
 

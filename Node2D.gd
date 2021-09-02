@@ -48,9 +48,15 @@ func load_imgs(path):
 								add_child(sprite)
 								var num = file_name.to_int()
 								sprite.playing = true
-								sprite.position.x = LEFT_MARGIN + (24+1+SEPARATION) * ((num-1) % NB_PER_LINE) + 13
-								sprite.position.y = UPER_MARGIN + (24+1+SEPARATION) * ((num-1) / NB_PER_LINE) + 13
-								
+								if num <= SMALL_LIMIT:
+									sprite.position.x = LEFT_MARGIN + (24+1+SEPARATION) * ((num-1) % NB_PER_LINE) + 13
+									sprite.position.y = UPER_MARGIN + (24+1+SEPARATION) * ((num-1) / NB_PER_LINE) + 13
+								elif num <= MEDIUM_LIMIT:
+									sprite.position.x = LEFT_MARGIN + (32+1+SEPARATION) * ((num-1) % 4) + 17
+									sprite.position.y = 188 + 16
+								else:
+									sprite.position.x = 75 + 24
+									sprite.position.y = 228 + 24
 							texture = dir2.get_next()
 						
 			file_name = dir.get_next()
@@ -76,8 +82,8 @@ func _input(event):
 
 func _process(delta):
 	
-	#if !loaded:
-	#	return
+	if !loaded:
+		return
 	var img : Image = get_viewport().get_texture().get_data()
 	img.convert(Image.FORMAT_RGBA8)
 	
