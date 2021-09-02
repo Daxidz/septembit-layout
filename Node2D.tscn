@@ -1,11 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://img/layout.png" type="Texture" id=1]
 [ext_resource path="res://Node2D.gd" type="Script" id=3]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/layout.png-2ea9639d0b3cfb9aa27123022920ed4e.stex"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 99, 146 )
-texture = ExtResource( 1 )
+texture = SubResource( 1 )
